@@ -1,1 +1,16 @@
-## Planteamiento
+## Approach
+
+I believe it's important to have a way to validate the actions the government is taking. And to achieve that, we need to make our own analysis of certain situations. And check if those actions have the expected results.
+
+I have some troubles selecting a database. First I try to check the efficiency of the vaccination campaigns using their location date and comparing them with the quantity of positives in that area. Sadly, the data of the campaigns was too small to be relevant. So I decided to use the data I had of the quantity of positives per settlement to determine which ones prioritize in the use of government actives based on the growth of the cases. Then use that information to compare the priority and actives the government define for that.settlements.
+
+## Development
+Basically I use the amount of positive cases and for each settlement and sum the total since the start of the reports till a specific month. Then I divide that by the total population in that settlement. By doing that I end up with a graph of the percentage growth of each settlement and compute a linear regression of that graph. The slope of that regression give me how much the positives cases are growing in time. Then I just add those values to a list and map the amount of that slope to an amount of actives given the total actives the government use in their priorities.
+
+I found that, at least, the government doesn't base their priorities in the growth of the positive cases based on the discrepancies in priorities. But that's not necessarily bad, maybe I'm missing some specific information or metrics that I need to consider. Nonetheless, we need to ask for those metrics so we can validate or agree with the actions taken. Validating the government actions needs to be a must, we cannot simply leave them do whatever they want without telling us the pros, cons and reasons for what they are doing. We need to stand our ground as a society and help the government to stay in the right course of action so we can improve the quality of life for every mexican.
+
+## Conclusions
+Based on the data we can say that the growth of positive cases is not the only thing being considered in the government priorities. Maybe this data could be used to reduce the growth in the areas that needed more actives or needed to balance the exceds. I also believe that we can use more datasets that provide us with more detailed information of the settlements and adjust in a better way the priorities.
+
+## Visualizations
+In this repository I will just add the python script. But I also did some visualizations of the data of each settlement. I made a set of graphs of the case positives over time considering just the positivies of each month. Another set includes the same date but adding the previous cases to the actual month. And the final set have the previous graph followed by the linear regression taken for that settlement. I add those sets of graphs and the datasets used and created to this [drive](https://drive.google.com/drive/folders/1I7Icvese8YEKtWxrR7aadMem9Xcl2lm5?usp=sharing).
